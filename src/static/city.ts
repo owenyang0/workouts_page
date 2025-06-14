@@ -2190,12 +2190,12 @@ export const chinaCities: ICity[] = [
   },
   {
     code: '810000',
-    name: '香港特别行政区',
+    name: '香港',
     province: '81',
   },
   {
     code: '820000',
-    name: '澳门特别行政区',
+    name: '澳门',
     province: '82',
   },
 ];

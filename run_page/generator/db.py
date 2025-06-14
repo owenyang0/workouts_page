@@ -29,7 +29,7 @@ def randomword():
 
 geopy.geocoders.options.default_user_agent = "my-application"
 # reverse the location (lat, lon) -> location detail
-g = Nominatim(user_agent=randomword())
+g = Nominatim(user_agent=randomword(), timeout=10)
 
 
 ACTIVITY_KEYS = [
@@ -115,7 +115,7 @@ def update_or_create_activity(session, run_activity):
                         )
                     except Exception:
                         pass
-
+            # print(f"Activity {run_activity.id} {run_activity.name} location_country:", location_country)
             activity = Activity(
                 run_id=run_activity.id,
                 name=run_activity.name,
